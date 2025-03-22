@@ -819,23 +819,4 @@ theme-toggle-container {
     }
 }
 
-@media (max-width: 480px) {
-    .theme-toggle-label {
-        width: 40px;
-        height: 20px;
-        border-radius: 10px;
-    }
 
-    .theme-toggle-label .sun,
-    .theme-toggle-label .moon {
-        font-size: 14px;
-    }
-
-    .theme-toggle:checked + .theme-toggle-label .sun {
-        transform: translateX(20px) translateY(-50%);
-    }
-
-    .theme-toggle:checked + .theme-toggle-label .moon {
-        transform: translateX(-20px) translateY(-50%);
-    }
-}
