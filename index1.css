@@ -107,7 +107,7 @@ h3:hover {
     animation: typing 2.5s steps(35, end), blink-caret 0.2s step-end infinite;
     font-weight: 700;
     text-align: left;
-    color: #003366; /* Blue accent */
+    color: #1F51FF; /* Blue accent */
 }
 
 .container {
