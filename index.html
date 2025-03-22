@@ -7,7 +7,7 @@
     <title>My Portfolio</title>
     <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f5ff.png"
         type="image/png">
-    <link rel="stylesheet" href="index.css">
+     <link id="theme-style" rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -16,11 +16,17 @@
             <h3>My Portfolio</h3>
         </div>
         <ul>
-            <li>Home</li>
             <li>Skills</li>
             <li>Project</li>
             <li>Education</li>
             <li>Contact</li>
+             <div class="theme-toggle-container">
+                <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                <label for="theme-toggle" class="theme-toggle-label">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </label>
+            </div>
         </ul>
     </nav>
     <main>
@@ -148,6 +154,7 @@
         </div>
     </div>
     <script src="index.js"></script>
+    <script src="index1.js"></script>
 </body>
 
 </html>
