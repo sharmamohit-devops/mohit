@@ -661,7 +661,7 @@ theme-toggle-container {
     }
 
     .typewriter {
-        margin-left: 23px;
+   margin-left: 23px;
         font-size: 21px;
         margin-top: 10px;
         overflow: hidden;
@@ -672,7 +672,7 @@ theme-toggle-container {
         animation: typing 2.5s steps(35, end), blink-caret 0.2s step-end infinite;
         font-weight: 700;
         text-align: left;
-        color: darkblue;
+        color: #1F51FF;
     }
 
     @keyframes typing {
