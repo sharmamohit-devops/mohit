@@ -550,6 +550,70 @@ button:hover {
         transform: translateX(0);
         opacity: 1;
     }
+}.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+theme-toggle-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-toggle {
+    display: none;
+}
+
+.theme-toggle-label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle-label .sun,
+.theme-toggle-label .moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.theme-toggle-label .sun {
+    left: 5px;
+    opacity: 1;
+}
+
+.theme-toggle-label .moon {
+    right: 5px;
+    opacity: 0;
+}
+
+/* Toggle Button Animation */
+.theme-toggle:checked+.theme-toggle-label {
+    background-color: #555;
+}
+
+.theme-toggle:checked+.theme-toggle-label .sun {
+    opacity: 0;
+    transform: translateX(30px) translateY(-50%);
+}
+
+.theme-toggle:checked+.theme-toggle-label .moon {
+    opacity: 1;
+    transform: translateX(-30px) translateY(-50%);
 }
 
 @media only screen and (max-width: 768px) {
