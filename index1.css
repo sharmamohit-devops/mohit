@@ -668,7 +668,7 @@ theme-toggle-container {
         border-right: 0.15em solid orange;
         display: inline-block;
         white-space: nowrap;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.13em;
         animation: typing 2.5s steps(35, end), blink-caret 0.2s step-end infinite;
         font-weight: 700;
         text-align: left;
