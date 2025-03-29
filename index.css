@@ -616,6 +616,193 @@ theme-toggle-container {
     transform: translateX(-30px) translateY(-50%);
 }
 
+footer {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--footer-bg-start), var(--footer-bg-end));
+    color: var(--footer-text);
+    transition: all 0.5s ease;
+  }
+  
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, 
+      #ff007f, #ff6b00, #ffd700, #4caf50, #2196f3, #9c27b0, #ff007f);
+    background-size: 400% 100%;
+    animation: rainbow-border 8s linear infinite;
+  }
+  
+  @keyframes rainbow-border {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--social-bg);
+    box-shadow: 0 4px 12px var(--social-shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--social-gradient-start), var(--social-gradient-end));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-link:hover::before {
+    opacity: 1;
+  }
+  
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--social-icon);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .social-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px var(--social-shadow-hover);
+  }
+  
+  .social-link:hover .social-icon {
+    fill: white;
+    transform: rotate(10deg) scale(1.2);
+  }
+  
+  footer p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .footer-message {
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: var(--copyright-text);
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  .footer-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0.15;
+  }
+  
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--bubble-color-1), var(--bubble-color-2));
+    animation: float-up 15s infinite linear;
+  }
+  
+  /* Theme-specific variables */
+  :root {
+    /* Dark mode */
+    --footer-bg-start: #1a1a2e;
+    --footer-bg-end: #16213e;
+    --footer-text: #ffffff;
+    --social-bg: rgba(255, 255, 255, 0.1);
+    --social-shadow: rgba(0, 0, 0, 0.3);
+    --social-shadow-hover: rgba(0, 123, 255, 0.4);
+    --social-icon: #ffffff;
+    --social-gradient-start: #ff007f;
+    --social-gradient-end: #007bff;
+    --gradient-start: #ff007f;
+    --gradient-end: #007bff;
+    --copyright-text: rgba(255, 255, 255, 0.7);
+    --bubble-color-1: #ff007f;
+    --bubble-color-2: #007bff;
+  }
+  
+  [data-theme="light"] {
+    /* Light mode */
+    --footer-bg-start: #f8f9fa;
+    --footer-bg-end: #e9ecef;
+    --footer-text: #333333;
+    --social-bg: rgba(0, 0, 0, 0.05);
+    --social-shadow: rgba(0, 0, 0, 0.1);
+    --social-shadow-hover: rgba(232, 30, 99, 0.3);
+    --social-icon: #555555;
+    --social-gradient-start: #e91e63;
+    --social-gradient-end: #3f51b5;
+    --gradient-start: #e91e63;
+    --gradient-end: #3f51b5;
+    --copyright-text: rgba(0, 0, 0, 0.6);
+    --bubble-color-1: #e91e63;
+    --bubble-color-2: #3f51b5;
+  }
+  
+  /* Animations */
+  @keyframes float-up {
+    0% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-100px) scale(1.2);
+      opacity: 0;
+    }
+  }
+  
 @media only screen and (max-width: 768px) {
     .nav {
         height: 150px;
@@ -687,20 +874,19 @@ theme-toggle-container {
 
     .container {
         flex-direction: row;
-        margin-left: 20px;
+        margin-left: 12px;
         margin-top: 30px;
-        gap: 45px;
+        gap: 20px;
         align-items: center;
-        padding-right: 18px;
+        padding-right: 2px;
     }
 
     .box {
         width: 50px;
         height: 45px;
         padding-top: 10px;
-        padding-left: 11px;
+        padding-left: 14px;
     }
-
     .image {
         margin-left: 0;
         margin-top: 60px;
