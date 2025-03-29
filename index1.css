@@ -618,7 +618,199 @@ theme-toggle-container {
     opacity: 1;
     transform: translateX(-30px) translateY(-50%);
 }
+footer {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Deep blue-purple gradient */
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
 
+/* Rainbow border animation (more vibrant in dark mode) */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    #ff007f, #ff6b00, #ffd700, #4caf50, #2196f3, #9c27b0, #ff007f);
+  background-size: 400% 100%;
+  animation: rainbow-border 8s linear infinite;
+  opacity: 0.9; /* More visible in dark mode */
+}
+
+/* Social links container */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glowing social links */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3),
+              inset 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff007f, #007bff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover::before {
+  opacity: 1;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.5));
+}
+
+.social-link:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.social-link:hover .social-icon {
+  fill: white;
+  transform: rotate(10deg) scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+/* Text styles */
+footer p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer-message {
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff007f, #007bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-shadow: none;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating bubbles (glow effect) */
+.footer-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff007f, #007bff);
+  animation: float-up 15s infinite linear;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+/* Animations */
+@keyframes rainbow-border {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Glow pulse animation */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .footer-links {
+    gap: 1rem;
+  }
+  
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .footer-message {
+    font-size: 1.1rem;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
 
 @media only screen and (max-width: 768px) {
     .nav {
@@ -689,20 +881,20 @@ theme-toggle-container {
         }
     }
 
-    .container {
+.container {
         flex-direction: row;
-        margin-left: 20px;
+        margin-left: 12px;
         margin-top: 30px;
-        gap: 45px;
+        gap: 20px;
         align-items: center;
-        padding-right: 18px;
+        padding-right: 2px;
     }
 
     .box {
         width: 50px;
         height: 45px;
         padding-top: 10px;
-        padding-left: 11px;
+        padding-left: 14px;
     }
 
     .image {
