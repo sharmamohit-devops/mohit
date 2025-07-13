@@ -2,217 +2,301 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZY1BX4Q5H"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      gtag('js', new Date());
-    
-      gtag('config', 'G-QZY1BX4Q5H');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f5ff.png"
-        type="image/png">
-     <link id="theme-style" rel="stylesheet" href="index.css">
+    <title>Mohit Sharma | Portfolio</title>
+    <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f5ff.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index1.css">
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav class="nav">
         <div class="logo">
-            <h3>My Portfolio</h3>
+            <h3>Mohit Sharma</h3>
         </div>
-        <ul>
-            <li>Skills</li>
-            <li>Project</li>
-            <li>Education</li>
-            <li>Contact</li>
-             <div class="theme-toggle-container">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li data-section="home">Home</li>
+            <li data-section="skills">Skills</li>
+            <li data-section="projects">Projects</li>
+            <li data-section="education">Education</li>
+            <li data-section="contact">Contact</li>
+            <div class="theme-toggle-container">
                 <input type="checkbox" id="theme-toggle" class="theme-toggle">
                 <label for="theme-toggle" class="theme-toggle-label">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+                    <span class="toggle-handle">🌓</span>
                 </label>
             </div>
         </ul>
     </nav>
-    <main>
-        <div class="text">
-            <h2>Hello, It's me</h2>
-            <h1>Mohit Sharma</h1>
-            <div class="typewriter">I am a frontend developer</div>
-        </div>
-        <div class="container">
-            <div class="box"><a href="https://www.linkedin.com/in/mohit-sharma-8a113630b/" target="_blank"><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path
-                            d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
-                </a></div>
-            <div class="box"><a
-                    href="mailto:mohitfrontendev@gmail.com?subject=Hello&body=Hi, I wanted to contact you."><svg
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path
-                            d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.65 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
-                    </svg></a></div>
-            <div class="box">
-                <a href="https://www.instagram.com/mohitsharma_dev7/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path
-                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                    </svg>
-                </a>
+
+    <!-- Hero Section -->
+    <main id="home">
+        <div class="particles" id="particles-js"></div>
+        <div class="hero-content">
+            <div class="text">
+                <h2>Hello, I'm</h2>
+                <h1>Mohit Sharma</h1>
+                <div class="typewriter">Frontend Developer & UI Enthusiast</div>
+                <div class="social-container">
+                    <a href="https://www.linkedin.com/in/mohit-sharma-8a113630b/" target="_blank" class="social-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/sharmamohit-devops" target="_blank" class="social-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/@mohit_javascript" target="_blank" class="social-box">
+                        <!-- Telegram SVG Logo -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+                            <circle cx="120" cy="120" r="120" fill="#37aee2"/>
+                            <circle cx="120" cy="120" r="110" fill="#fff"/>
+                            <path d="M53 120.5l131.5-54.5c6.5-2.5 12 1.5 10 10l-22.5 106c-1.5 7-6 8.5-12 5.5l-33-24-16 15.5c-1.5 1.5-3 3-6 3l2-35 64-58c2.5-2-0.5-3-4-1l-79 50-34-10.5c-7-2-7-7 1.5-10.5z" fill="#37aee2"/>
+                            <path d="M97 176.5c-2 0-1.5-0.5-2-2l-8-26 74-47c3.5-2.5 6.5-1 4 1l-64 58z" fill="#c8daea"/>
+                            <path d="M123 162.5l-16 15.5c-1.5 1.5-3 0.5-2-1l2-35z" fill="#a9c9dd"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mohitsharma_dev7/" target="_blank" class="social-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:mohitfrontendev@gmail.com" class="social-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.65 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div class="box">
-                <a href="https://t.me/mohit_javascript" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path
-                            d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l16.8-6.48c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
-                    </svg>
-                </a>
-            </div>
-            <div class="box">
-                <a href="https://github.com/sharmamohit-devops" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path
-                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="image">
             <div class="image-container">
-                <img src="portfolio.png.jpeg" alt="Front Image" class="front">
-                <img src="portfolio1.png.png" alt="Back Image" class="back">
+                <div class="image-wrapper">
+                    <img src="/images/portfolio.png.jpeg" alt="Mohit Sharma" class="front">
+                    <img src="/images/portfolio1.png.png" alt="Mohit Sharma" class="back">
+                </div>
             </div>
         </div>
-    </main class="main">
-    <h1 class="tag"> My Skills</h1>
-    <div class="skills">
-        <div class="skill-box"><img src="html.png" alt="">HTML</div>
-        <div class="skill-box"><img src="css.png.png" alt="">CSS</div>
-        <div class="skill-box"><img src="icons8-js-48.png" alt="">JAVA SCRIPT</div>
-        <div class="skill-box"><img src="icons8-node-js-48.png" alt="">NODE JS</div>
-        <div class="skill-box"><img src="icons8-mongodb-48.png" alt="">MONGO DB</div>
-        <div class="skill-box"><img src="icons8-mongoose-48.png" alt="">MOONGOSE</div>
-        <div class="skill-box"><img src="icons8-react-100.png" alt="">REACT</div>
-        <div class="skill-box"><img src="icons8-bootstrap-48.png" alt="">BOOTSTRAP</div>
-        <div class="skill-box"><img src="icons8-tailwind-css-100.png" alt="">TAILWIND CSS</div>
-    </div>
-    <div class="project_section">
-        <div id="projects" class="project-section">
-            <h2 style="color: darkslateblue;">Projects</h2>
-            <div class="project-item">
-                <div class="project-title">Project 1: Weather-App</div>
-                <p class="project-description">A user-friendly weather app that provides real-time forecasts, alerts,
-                    and detailed climate information for any location.</p>
-                <p class="project-tech">Technologies used: HTML, CSS, JavaScript</p>
-                <a href="https://mohit-weather.netlify.app/" target="_blank">Weather-App</a>
+    </main>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="/images/html.png" alt="HTML">
+                <h3>HTML5</h3>
             </div>
-            <div class="project-item">
-                <div class="project-title">Project 2:Todo-App</div>
-                <p class="project-description">A simple and intuitive Todo app that helps you to manage tasks, set
-                    deadlines, and boost productivity effortlessly.
+            <div class="skill-card">
+                <img src="/images/css.png.png" alt="CSS">
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-card">
+                <img src="/images/icons8-js-48.png" alt="JavaScript">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+                <img src="/images/icons8-react-100.png" alt="React">
+                <h3>React</h3>
+            </div>
+            <div class="skill-card">
+                <img src="/images/icons8-node-js-48.png" alt="Node.js">
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-card">
+                <img src="/images/icons8-mongodb-48.png" alt="MongoDB">
+                <h3>MongoDB</h3>
+            </div>
+            <div class="skill-card">
+                <img src="/images/icons8-mongoose-48.png" alt="Mongoose">
+                <h3>Mongoose</h3>
+            </div>
+            <div class="skill-card">
+                <img src="/images/icons8-bootstrap-48.png" alt="Bootstrap">
+                <h3>Bootstrap</h3>
+            </div>
+            <div class="skill-card">
+                <img src="/images/icons8-tailwind-css-100.png" alt="Tailwind CSS">
+                <h3>Tailwind CSS</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3 class="project-title">Weather Application</h3>
+                <p class="project-description">
+                    A responsive weather application that provides real-time weather forecasts for any location worldwide. 
+                    Features include current weather conditions, 5-day forecast, temperature units toggle, and location search.
                 </p>
-                <p class="project-tech">Technologies used: HTML, CSS, JavaScript</p>
-                <a href="https://mohit-todolist.netlify.app/" target="_blank">Todo-App</a>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">API Integration</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://mohit-weather.netlify.app/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/sharmamohit-devops/weather-app" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                </div>
             </div>
-            <div class="project-item">
-                <div class="project-title">Project 3: Blogging Platform</div>
-                <p class="project-description">A blogging platform where users can create and share their blogs.</p>
-                <p class="project-tech">Technologies used: Node.js, Express, MongoDB</p>
+            
+            <div class="project-card">
+                <h3 class="project-title">Todo List Application</h3>
+                <p class="project-description">
+                    A feature-rich todo list application with task management capabilities including add, edit, delete, 
+                    mark as complete, and filter tasks. Local storage integration ensures tasks persist between sessions.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Local Storage</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://mohit-todolist.netlify.app/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/sharmamohit-devops/todo-list" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Blogging Platform</h3>
+                <p class="project-description">
+                    A full-stack blogging platform where users can create, read, update, and delete blog posts. 
+                    Features include user authentication, rich text editing, comments, and responsive design.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Mongoose</span>
+                    <span class="tech-tag">EJS</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Coming Soon
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="education_section">
-        <div id="education" class="education-section">
-            <h2 style="color: darkslateblue;">Education</h2>
-            <div class="education-item">
-                <div class="as">Bachelor of Technology (B.Tech) in Electrical Engineering</div class="as">
-                <p class="institution">Aligrah Muslim University</p>
-                <p class="duration">Expected Graduation: May 2028</p>
-                <p class="details">Currently pursuing a degree in Electrical Engineering with a focus on Empowering
-                    Coding Skills and Transform challenges into solutions with every keystroke.</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="education-degree">Bachelor of Technology (B.Tech) in Electrical Engineering</h3>
+                    <p class="institution">Aligarh Muslim University</p>
+                    <p class="duration">Expected Graduation: May 2028</p>
+                    <p class="details">
+                        Currently pursuing a degree in Electrical Engineering with a focus on power systems and control theory. 
+                        Complementing my technical education with self-study in web development and computer science.
+                    </p>
+                </div>
             </div>
-            <div class="education-item">
-                <div class="as">Class 12 (Senior Secondary)</div class="as">
-                <p class="institution">Sayyid Hamid Senior SecondarySchool</p>
-                <p class="duration">Year of Passing: 2024</p>
-                <p class="details">Percentage: 74.8%</p>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="education-degree">Class 12 (Senior Secondary)</h3>
+                    <p class="institution">Sayyid Hamid Senior Secondary School</p>
+                    <p class="duration">Year of Passing: 2024</p>
+                    <p class="details">
+                        Completed senior secondary education with Physics, Chemistry, and Mathematics as main subjects. 
+                        Achieved 74.8% in final examinations while actively participating in coding competitions and tech events.
+                    </p>
+                </div>
             </div>
-            <div class="education-item">
-                <div class="as">Class 10 (Secondary)</div class="as">
-                <p class="institution">Babu Lal Jain Inter Collge</p>
-                <p class="duration">Year of Passing: 2021</p>
-                <p class="details">Percentage: 82%</p>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="education-degree">Class 10 (Secondary)</h3>
+                    <p class="institution">Babu Lal Jain Inter College</p>
+                    <p class="duration">Year of Passing: 2021</p>
+                    <p class="details">
+                        Completed secondary education with distinction (82%). Developed foundational skills in mathematics 
+                        and problem-solving that would later support my transition into programming and web development.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="contact-us">
-        <div class="contact">
-            <h1>Contact Us</h1>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+    </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <div id="emailError" class="error"></div>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <div class="char-counter" id="charCounter">0/500</div>
-                <div id="messageError" class="error"></div>
-
-                <button type="submit">Send Message</button>
-            </form>
-            <div id="responseMessage"></div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/in/mohit-sharma-8a113630b/" target="_blank" aria-label="LinkedIn"
-                class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
-                </svg>
-            </a>
-
-            <a href="https://github.com/sharmamohit-devops" target="_blank" aria-label="GitHub" class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg>
-            </a>
-
-            <a href="https://www.instagram.com/mohitsharma_dev7/" target="_blank" aria-label="Instagram"
-                class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-            </a>
-
-            <a href="https://t.me/@mohit_javascript" target="_blank" aria-label="Telegram" class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l16.8-6.48c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
-                </svg>
-            </a>
-
-            <a href="mailto:mohitfrontendev@gmail.com" aria-label="Email" class="social-link">
-                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.65 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
-                </svg>
-            </a>
+        <div class="footer-bubbles">
+            <div class="bubble" style="width: 40px; height: 40px; left: 10%; animation-duration: 15s;"></div>
+            <div class="bubble" style="width: 20px; height: 20px; left: 20%; animation-duration: 20s; animation-delay: 2s;"></div>
+            <div class="bubble" style="width: 50px; height: 50px; left: 35%; animation-duration: 18s; animation-delay: 1s;"></div>
+            <div class="bubble" style="width: 30px; height: 30px; left: 50%; animation-duration: 22s; animation-delay: 3s;"></div>
+            <div class="bubble" style="width: 25px; height: 25px; left: 65%; animation-duration: 17s; animation-delay: 0s;"></div>
+            <div class="bubble" style="width: 45px; height: 45px; left: 80%; animation-duration: 19s; animation-delay: 4s;"></div>
         </div>
-        <p>Let's build something amazing together!</p>
-        <p class="copyright">© <span id="current-year"></span> Mohit Sharma. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">Mohit Sharma</div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/mohit-sharma-8a113630b/" target="_blank" class="footer-social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/sharmamohit-devops" target="_blank" class="footer-social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://t.me/@mohit_javascript" target="_blank" class="footer-social-link">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://www.instagram.com/mohitsharma_dev7/" target="_blank" class="footer-social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:mohitfrontendev@gmail.com" class="footer-social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="footer-text">Let's build something amazing together!</p>
+            <p class="footer-copyright">© <span id="current-year"></span> Mohit Sharma. All rights reserved.</p>
+        </div>
     </footer>
     <script src="index.js"></script>
-    <script src="index1.js"></script>
 </body>
 
 </html>
