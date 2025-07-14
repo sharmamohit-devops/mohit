@@ -144,26 +144,47 @@
         });
 
         // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Get form values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-                
-                // Here you would typically send the form data to a server
-                console.log({ name, email, message });
-                
-                // Show success message
-                alert('Thank you for your message! I will get back to you soon.');
-                
-                // Reset form
-                contactForm.reset();
-            });
+      const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Get form elements
+    const formData = new FormData(contactForm);
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    
+    // Disable button to prevent multiple submissions
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    
+    try {
+      // Send to FormSubmit
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
         }
+      });
+      
+      if (response.ok) {
+        // Show success message
+        alert('Thank you for your message! I will get back to you soon.');
+        // Reset form
+        contactForm.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('There was an error sending your message. Please try again later.');
+    } finally {
+      // Re-enable button
+      submitButton.disabled = false;
+      submitButton.textContent = 'Submit Form';
+    }
+  });
+}
 
         // Fixed typewriter effect
         const typewriterElement = document.querySelector('.typewriter');
