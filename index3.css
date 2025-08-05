@@ -1,0 +1,46 @@
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, var(--accent-tertiary), var(--accent-quaternary));
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    transition: all var(--transition-speed) var(--bounce-easing);
+    box-shadow: 0 8px 25px rgba(255, 126, 107, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.resume-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.7s;
+}
+
+.resume-btn:hover::before {
+    left: 100%;
+}
+
+.resume-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 126, 107, 0.5);
+}
+
+.resume-btn i {
+    margin-right: 8px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.resume-btn:hover i {
+    transform: rotate(10deg) scale(1.2);
+}
