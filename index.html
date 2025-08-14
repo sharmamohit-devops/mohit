@@ -312,18 +312,19 @@
             <p class="footer-copyright">© <span id="current-year"></span> Mohit Sharma. All rights reserved.</p>
         </div>
         <p>Visitor Count: <span id="counter">Loading...</span></p>
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        fetch("https://api.counterapi.dev/v1/sharmamohit.vercel.app/visits/up")
-        .then(response => response.json())
-        .then(data => {
-        document.getElementById("counter").textContent = data.count;
-         })
-        .catch(error => {
-        console.error("Error fetching counter:", error);
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("https://api.countapi.xyz/hit/sharmamohit.vercel.app/visits")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("counter").textContent = data.value;
+    })
+    .catch(err => {
+        console.error("Counter error:", err);
         document.getElementById("counter").textContent = "Error";
-        });
     });
+});
 </script>
 
     </footer>
@@ -331,6 +332,7 @@
 </body>
 
 </html>
+
 
 
 
