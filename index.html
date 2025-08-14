@@ -311,27 +311,46 @@
             <p class="footer-text">Let's build something amazing together!</p>
             <p class="footer-copyright">© <span id="current-year"></span> Mohit Sharma. All rights reserved.</p>
         </div>
-        <p>Visitor Count: <span id="counter">Loading...</span></p>
+      <p>Visitor Count: <span id="counter">Loading...</span></p>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("https://api.countapi.xyz/hit/sharmamohit.vercel.app/visits")
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("counter").textContent = data.value;
-    })
-    .catch(err => {
-        console.error("Counter error:", err);
-        document.getElementById("counter").textContent = "Error";
+const BIN_URL = "https://api.jsonbin.io/v3/b/YOUR_BIN_ID";
+const API_KEY = "YOUR_API_KEY";
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    // Get current count
+    let res = await fetch(BIN_URL, {
+      headers: { "X-Master-Key": API_KEY }
     });
+    let data = await res.json();
+    let visits = data.record.visits + 1;
+
+    // Update count in database
+    await fetch(BIN_URL, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Master-Key": API_KEY
+      },
+      body: JSON.stringify({ visits })
+    });
+
+    document.getElementById("counter").textContent = visits;
+  } catch (err) {
+    console.error("Error:", err);
+    document.getElementById("counter").textContent = "Error";
+  }
 });
 </script>
+
 
     </footer>
     <script src="index.js"></script>
 </body>
 
 </html>
+
 
 
 
