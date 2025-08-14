@@ -311,45 +311,15 @@
             <p class="footer-text">Let's build something amazing together!</p>
             <p class="footer-copyright">© <span id="current-year"></span> Mohit Sharma. All rights reserved.</p>
         </div>
-      <p>Visitor Count: <span id="counter">Loading...</span></p>
-
-<script>
-const BIN_URL = "https://api.jsonbin.io/v3/b/YOUR_BIN_ID";
-const API_KEY = "YOUR_API_KEY";
-
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    // Get current count
-    let res = await fetch(BIN_URL, {
-      headers: { "X-Master-Key": API_KEY }
-    });
-    let data = await res.json();
-    let visits = data.record.visits + 1;
-
-    // Update count in database
-    await fetch(BIN_URL, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Master-Key": API_KEY
-      },
-      body: JSON.stringify({ visits })
-    });
-
-    document.getElementById("counter").textContent = visits;
-  } catch (err) {
-    console.error("Error:", err);
-    document.getElementById("counter").textContent = "Error";
-  }
-});
-</script>
-
-
+        <!-- hitwebcounter Code START -->
+        <a href="https://www.hitwebcounter.com" target="_blank">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=21393883&style=0008&nbdigits=7&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>        
     </footer>
     <script src="index.js"></script>
 </body>
 
 </html>
+
 
 
 
