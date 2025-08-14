@@ -311,9 +311,7 @@
             <p class="footer-text">Let's build something amazing together!</p>
             <p class="footer-copyright">© <span id="current-year"></span> Mohit Sharma. All rights reserved.</p>
         </div>
-    </footer>
-    <script src="index.js"></script>
-       <p>Visitor Count: <span id="counter"></span></p>
+         <p>Visitor Count: <span id="counter"></span></p>
         <script>
         fetch('https://api.countapi.xyz/hit/sharmamohit.vercel.app/visits')
         .then(res => res.json())
@@ -321,10 +319,12 @@
         document.getElementById('counter').textContent = data.value;
           });
         </script>
-
+    </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
+
 
 
 
